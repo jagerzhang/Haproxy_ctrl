@@ -12,10 +12,10 @@
 
 ### 注册服务
 
-保存为 /usr/local/haproxy/sbin/ctrl.sh，赋可执行权限，如下注册系统服务：
+保存为 /usr/local/haproxy/sbin/haproxy_ctrl.sh，赋可执行权限，如下注册系统服务：
 ```
-chmod +x /usr/local/haproxy/sbin/ctrl.sh
-ln -sf /usr/local/haproxy/sbin/ctrl.sh  /etc/init.d/haproxy
+chmod +x /usr/local/haproxy/sbin/haproxy_ctrl.sh
+ln -sf /usr/local/haproxy/sbin/haproxy_ctrl.sh  /etc/init.d/haproxy
 chkconfig haproxy on
 ```
 
@@ -41,7 +41,7 @@ chkconfig haproxy on
 
 ###配置自拉起
 ```
-* * * * * bash /usr/local/haproxy/ctrl.sh mon >/dev/null 2>&1
+* * * * * bash /usr/local/haproxy/haproxy_ctrl.sh mon >/dev/null 2>&1
 ```
 
 详细说明 ：https://zhangge.net/5125.html
