@@ -64,7 +64,7 @@ check_process()
 # check Configuration file
 check_conf()
 {
-    $EXEC -c -f $DEFAULT_CONF `ext_configs` >/dev/null 2>&1
+    $EXEC -c -f $DEFAULT_CONF `ext_configs` >/dev/null
     return $?
 }
 get_pid()
